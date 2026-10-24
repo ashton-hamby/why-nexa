@@ -38,4 +38,4 @@
     el.textContent=zone==='CST'?'12:00 PM CST':'1:00 PM CDT';
   }catch(e){el.textContent='1:00 PM CDT / 12:00 PM CST'}
 })();
-</script></body></html>+Number(raw).toLocaleString('en-US'):''};avg.addEventListener('input',()=>{formatAvg();update()});ids.filter(id=>id!=='avgLoan').forEach(id=>document.getElementById(id).addEventListener('input',update));update()})();(function(){const el=document.getElementById('call-time');if(!el)return;try{const now=new Date();const chicago=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit',hour12:true,timeZoneName:'short'});const parts=chicago.formatToParts(new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),18,0)));const zone=parts.find(p=>p.type==='timeZoneName')?.value||'';el.textContent=zone==='CST'?'12:00 PM CST':'1:00 PM CDT';}catch(e){el.textContent='1:00 PM CDT / 12:00 PM CST';}})();</script></body></html>
+</script></body></html>
