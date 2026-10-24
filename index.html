@@ -57,7 +57,7 @@
  form.addEventListener('submit',function(event){
   event.preventDefault();if(!form.reportValidity())return;
   const value=id=>document.getElementById(id).value.trim();
-  const body=['Hi Ashton,','',"I'm interested in learning more about NEXA. Here is my contact information:",'','Full Name: '+value('lead-name'),'NMLS #: '+value('lead-nmls'),'Phone: '+value('lead-phone'),'Email: '+value('lead-email'),'','I look forward to connecting.'].join('\\n');
+  const body=['Hi Ashton,','',"I'm interested in learning more about NEXA. Here is my contact information:",'','Full Name: '+value('lead-name'),'NMLS #: '+value('lead-nmls'),'Phone: '+value('lead-phone'),'Email: '+value('lead-email'),'','I look forward to connecting.'].join('\n');
   const url='mailto:ahamby@nexalending.com?subject='+encodeURIComponent('Interested in NEXA - '+value('lead-name'))+'&body='+encodeURIComponent(body);
   if(typeof window.gtag==='function')window.gtag('event','recruiting_email_draft_opened');
   else if(typeof window.plausible==='function')window.plausible('recruiting_email_draft_opened');
